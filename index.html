@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Beacons of Hope - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <section class="hero">
+        <h1>Lighting Lives. Restoring Hope.</h1>
+        <p>Together we transform communities.</p>
+    </section>
+
+    <section>
+        <h2>Create Account</h2>
+        <div class="form-box">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="createAccount()">Create Account</button>
+        </div>
+
+        <h2>Donate</h2>
+        <div class="form-box">
+            <select id="payment">
+<option value="mpesa">M-Pesa</option>
+<option value="card">Bank Card</option>
+</select>
+            <input type="number" id="amount" placeholder="Amount (KES)">
+            <button onclick="donate()">Donate</button>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Beacons of Hope Ministry
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
