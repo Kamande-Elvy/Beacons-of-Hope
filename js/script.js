@@ -38,4 +38,12 @@ function donate() {
 // 50 second reminder
 setInterval(() => {
     alert("Reminder: Continue touching hearts through your giving ❤️");
+}, 50000); // Smooth fade in
+window.addEventListener("load", () => {
+    document.body.style.opacity = 1;
+});
+
+// 50 second giving reminder
+setInterval(() => {
+    alert("Continue touching hearts through your giving ❤️");
 }, 50000);
