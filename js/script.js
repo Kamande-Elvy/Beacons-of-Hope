@@ -15,6 +15,40 @@ function createAccount() {
     alert("Welcome " + name + "! Your account has been created.");
 }
 
+function Password() {
+    const password = document.getElementById("Password").value;
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return;
+    }
+    if (password.toLowerCase().includes("password")) {
+        alert("Password cannot contain the word 'password'.");
+        return;
+    }
+    if (!/[A-Z]/.test(password)) {
+        alert("Password must contain at least one uppercase letter.");
+        return;
+    }
+    if (!/[0-9]/.test(password)) {
+        alert("Password must contain at least one number.");
+        return;
+    }
+    if (!/[!@#$%^&*]/.test(password)) {
+        alert("Password must contain at least one special character.");
+        return;
+    }
+    if (password.length > 20) {
+        alert("Password cannot be longer than 20 characters.");
+        return;
+    }
+    if (/\s/.test(password)) {
+        alert("Password cannot contain spaces.");
+        return;
+    }
+}
+alert("Password is strong! Your account is secure.");
+
+
 // Donation
 function donate() {
     const name = document.getElementById("name").value;
@@ -27,7 +61,7 @@ function donate() {
     }
 
     if (method === "mpesa") {
-        alert("M-Pesa prompt sent for KES " + amount);
+        alert("M-Pesa prompt sent for KES " + amount + "Please complete the payment on your phone.");
     } else {
         alert("Processing card payment of KES " + amount);
     }
@@ -37,7 +71,7 @@ function donate() {
 
 // 50 second reminder
 setInterval(() => {
-    alert("Reminder: Continue touching hearts through your giving ❤️");
+    alert("Reminder: It is in giving that humanity is cemented in our hearts ❤️");
 }, 50000); // Smooth fade in
 window.addEventListener("load", () => {
     document.body.style.opacity = 1;
